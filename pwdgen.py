@@ -30,5 +30,3 @@ if len(password) > 25:
         
 else:
     print("Generated password:", password)
-    print('You have 7 seconds to copy it, COPY IT!')
-
