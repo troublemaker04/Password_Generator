@@ -21,13 +21,14 @@ password_generator = PasswordGenerator()
 password_length = int(input("Enter the desired password length: "))
 password = password_generator.generate_password(password_length)
 
-if len(password) > 50:
-    with open('generatedpwd.txt','w')as file:
+
+
+if len(password) > 25:
+    with open('generatedpwd.txt', 'w') as file:
         file.write(password)
-        print('since ur password was more than 50 charecters long, it was probably to big to fit on one screen, so we just saved it to a file! The file should be called, generatedpwd.')
-        print('exiting in 8 seconds.')
-        time.sleep(8)
+        message = input('Since your password was more than 25 characters long, it was probably too big to fit on one screen, so we just saved it to a file! The file should be called "generatedpwd.txt".(press enter to exit)')
         
 else:
     print("Generated password:", password)
-    print('you have 7 seconds to copy it, COPY IT!')
+    print('You have 7 seconds to copy it, COPY IT!')
+
